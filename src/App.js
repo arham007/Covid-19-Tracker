@@ -16,14 +16,21 @@ function App() {
 
     fetchApi()
   },[])
-  // console.log(global)
+ 
+  const handleChange=async (country)=>{
+    const data=await fetchGlobal(country)
+    setGlobal(data)
+
+  }
   
   return (
    <>
    <div className="container">
      <Cards data={global} />
-     {/* <Countrypicker />
-     <Chart /> */}
+     <br /><br />
+     <Countrypicker handleChange={handleChange} />
+     <br /><br />
+     <Chart />
    </div>
    </>
   );

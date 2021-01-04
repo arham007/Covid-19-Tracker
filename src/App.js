@@ -1,9 +1,16 @@
 import React from 'react';
+import Card from './Components/Card';
+import Countrypicker from './Components/Countrypicker';
+import Chart from './Components/Chart';
 
 function App() {
   return (
    <>
-   <h1>Hello Arham</h1>
+   <div className="container">
+     <Card />
+     <Countrypicker />
+     <Chart />
+   </div>
    </>
   );
 }

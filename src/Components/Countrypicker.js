@@ -7,7 +7,7 @@ import { fetchCountry } from '../Api';
 
 
 const Countrypicker=({handleChange})=>{
-    console.log(handleChange)
+    // console.log(handleChange)
     const [country,setCountry]=useState([])
     useEffect(()=>{
         async function fetchApi(){
@@ -24,7 +24,7 @@ const Countrypicker=({handleChange})=>{
         <FormControl style={{width:"20%"}}>
       
         <NativeSelect onChange={(e)=>{handleChange(e.target.value)}} >
-          <option value="Global">Global</option>
+          <option >Global</option>
           {country.map((country,i)=>{
               return(
 

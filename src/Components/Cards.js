@@ -4,12 +4,13 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { Card } from '@material-ui/core';
 import CountUp from 'react-countup';
+import Spinner from '../Spinner'
 
 
 const Cards = ({data:{confirmed , recovered , lastUpdate , deaths}}) => {
  
    if (!confirmed){
-       return "Loading..."
+       return <div style={{marginTop:"20px"}}> <Spinner  value="PropTypes.number.isRequired" /></div>
    }
     return (
         <>
